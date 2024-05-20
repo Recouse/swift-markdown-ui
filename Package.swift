@@ -18,7 +18,7 @@ let package = Package(
     )
   ],
   dependencies: [
-    .package(url: "https://github.com/gonzalezreal/NetworkImage", from: "6.0.0"),
+    .package(url: "https://github.com/kean/Nuke.git", from: "12.7.0"),
     .package(url: "https://github.com/pointfreeco/swift-snapshot-testing", from: "1.10.0"),
   ],
   targets: [
@@ -27,7 +27,8 @@ let package = Package(
       name: "MarkdownUI",
       dependencies: [
         "cmark-gfm",
-        .product(name: "NetworkImage", package: "NetworkImage"),
+        .product(name: "Nuke", package: "Nuke"),
+        .product(name: "NukeUI", package: "Nuke"),
       ]
     ),
     .testTarget(
